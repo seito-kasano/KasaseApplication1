@@ -33,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         prefDataStore = PrefDataStore.getInstance(this);
-        binding.text.setText(R.string.text_1);
+        /*
+        prefDataStore.getString("name")
+                        .ifPresent(name -> binding.text.setText(name));
+         */
+        //binding.text.setText(R.string.text_1);
 
         binding.button.setOnClickListener(view -> {
             binding.text.setText(R.string.text_sample);
@@ -60,5 +64,12 @@ public class MainActivity extends AppCompatActivity {
             var text = binding.editTextText.getText().toString();
             prefDataStore.setString("name",text);
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        prefDataStore.getString("name")
+                .ifPresent(name -> binding.text.setText(name));
     }
 }
