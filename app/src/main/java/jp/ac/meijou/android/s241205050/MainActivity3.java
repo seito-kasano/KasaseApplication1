@@ -30,8 +30,113 @@ public class MainActivity3 extends AppCompatActivity {
         binding = ActivityMain3Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.buttonNum0.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "0";
+            } else {
+                current = current + "0";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum1.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "1";
+            } else {
+                current = current + "1";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum2.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "2";
+            } else {
+                current = current + "2";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum3.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "3";
+            } else {
+                current = current + "3";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum4.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "4";
+            } else {
+                current = current + "4";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum5.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "5";
+            } else {
+                current = current + "5";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum6.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "6";
+            } else {
+                current = current + "6";
+            }
+            binding.textViewNum.setText(current);
+        });
+
         binding.buttonNum7.setOnClickListener(view -> {
-            binding.textViewNum.setText("7");
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "7";
+            } else {
+                current = current + "7";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum8.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "8";
+            } else {
+                current = current + "8";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonNum9.setOnClickListener(view -> {
+            String current = binding.textViewNum.getText().toString();
+            if (current.equals("0")) {
+                current = "9";
+            } else {
+                current = current + "9";
+            }
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonAC.setOnClickListener(view -> {
+            String current = "0";
+            binding.textViewNum.setText(current);
+        });
+
+        binding.buttonKakeru.setOnClickListener(view -> {
+
         });
     }
 }

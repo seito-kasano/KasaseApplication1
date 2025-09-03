@@ -22,7 +22,8 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main2);
+        binding = ActivityMain2Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,11 +32,10 @@ public class MainActivity2 extends AppCompatActivity {
 
         prefDataStore = PrefDataStore.getInstance(this);
 
-        binding = ActivityMain2Binding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+
 
         binding.buttonA.setOnClickListener(view -> {
-            var intent = new Intent(this, MainActivity.class);
+            var intent = new Intent(this, MainActivity3.class);
             startActivity(intent);
         });
 
@@ -43,6 +43,13 @@ public class MainActivity2 extends AppCompatActivity {
             var intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("https://www.yahoo.co.jp "));
+            startActivity(intent);
+        });
+
+        binding.buttonSend.setOnClickListener(view -> {
+            var text = binding.editTextText2.getText().toString();
+            Intent intent = new Intent(this, MainActivity4.class);
+            intent.putExtra("title", text);
             startActivity(intent);
         });
     }
