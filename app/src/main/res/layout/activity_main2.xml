@@ -82,4 +82,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/editTextText2"
         app:layout_constraintBottom_toBottomOf="@id/editTextText2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="Result:"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/editTextText2"
+        app:layout_constraintEnd_toStartOf="@id/buttonBoot"
+        app:layout_constraintTop_toBottomOf="@id/buttonSend"
+
+
+        />
+
+    <Button
+        android:id="@+id/buttonBoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起動"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/buttonSend"
+        app:layout_constraintStart_toEndOf="@id/textView6"
+        app:layout_constraintTop_toBottomOf="@id/buttonSend" />
 </androidx.constraintlayout.widget.ConstraintLayout>

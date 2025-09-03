@@ -15,6 +15,9 @@ import jp.ac.meijou.android.s241205050.databinding.ActivityMainBinding;
 public class MainActivity3 extends AppCompatActivity {
 
     private ActivityMain3Binding binding;
+    public int a;
+    public int cal;
+    public int b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +139,7 @@ public class MainActivity3 extends AppCompatActivity {
         });
 
         binding.buttonKakeru.setOnClickListener(view -> {
-
         });
     }
+
 }
